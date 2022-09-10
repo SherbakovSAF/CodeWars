@@ -1,3 +1,20 @@
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+// if bmi <= 18.5 return "Underweight"
+// if bmi <= 25.0 return "Normal"
+// if bmi <= 30.0 return "Overweight"
+// if bmi > 30 return "Obese"
+function bmi(weight, height) {
+     let calculationBMI = weight / Math.pow(height, 2)
+     if (calculationBMI <= 18.5) {
+          return console.log('Underweight')
+     } else if (calculationBMI <= 25){
+          return console.log('Normal')
+     } else if (calculationBMI <= 30){
+          return console.log('Overweight')
+     } else {
+     return console.log('Obese')
+     }
+}
 // Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
 // Use conditionals to return the proper message:
 // case	return
@@ -32,4 +49,3 @@ function digitize(n) {
 function numberToString(num) {
      return String(num) 
 }
-
