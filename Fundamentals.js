@@ -1,3 +1,23 @@
+// Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+// Example
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// The returned format must be correct in order to complete this challenge.
+// Don't forget the space after the closing parentheses!
+
+function createPhoneNumber(numbers){
+     switch (numbers.length){
+          case 10:
+               let codeCountry = numbers.slice(0,3).join('')
+               let number1 = numbers.slice(3,6).join('')
+               let number2 = numbers.slice(6).join('')
+               return `(${codeCountry}) ${number1}-${number2}`
+          default:
+               break;
+     }
+}
+
+console.log(createPhoneNumber([1,2,4,6,3,4,3,3,1,4]))
+
 // Write function bmi that calculates body mass index (bmi = weight / height2).
 // if bmi <= 18.5 return "Underweight"
 // if bmi <= 25.0 return "Normal"
@@ -6,15 +26,15 @@
 function bmi(weight, height) {
      let calculationBMI = weight / Math.pow(height, 2)
      if (calculationBMI <= 18.5) {
-          return console.log('Underweight')
+          return 'Underweight'
      } else if (calculationBMI <= 25){
-          return console.log('Normal')
+          return 'Normal'
      } else if (calculationBMI <= 30){
-          return console.log('Overweight')
+          return 'Overweight'
      } else {
-     return console.log('Obese')
+     return 'Obese'
      }
-}
+};
 // Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
 // Use conditionals to return the proper message:
 // case	return
