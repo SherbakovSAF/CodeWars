@@ -1,11 +1,23 @@
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+// Use conditionals to return the proper message:
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+function greetOne (name, owner) {
+     switch (name) {
+          case owner:
+               return 'Hello boss';
+          default: 
+               return 'Hello guest';
+     }
+   }
+
 // Very simple, given an integer or a floating-point number, find its opposite.
 // Examples:
 function opposite(number) {
      return number * -1
-   }
+}
 
-console.log(opposite(32))
-createPhoneNumber([1,2,4,5,6,6,7,7,6,1])
 // Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
 // [Make sure you type the exact thing I wrote or the program may not execute properly]
 function greet(name){
