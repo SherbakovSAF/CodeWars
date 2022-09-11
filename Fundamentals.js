@@ -1,3 +1,27 @@
+// Часы показывают hчасы, mминуты и sсекунды после полуночи.
+// Ваша задача — написать функцию, которая возвращает время с полуночи в миллисекундах.
+// Пример:
+// h = 0
+// m = 1
+// s = 1
+// result = 61000
+// Входные ограничения:
+// 0 <= h <= 23
+// 0 <= m <= 59
+// 0 <= s <= 59
+function past(h, m, s){
+     let hours = h * 3600000
+     let minute = m * 60000
+     let seconds = s * 1000
+     if (h <= 23 && m <= 59 && s <= 59) {
+          return hours+minute+seconds
+     } else (
+          console.log('Вы ввели что то неправильно')
+     )
+     
+   }
+   console.log(past(24,54,1))
+
 // Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 // For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
 // Note: The function accepts an integer and returns an integer
@@ -9,11 +33,7 @@ function squareDigits(num){
      }
      return Number(arr.join(''));
 }
-// 
-//      for (i < 0; i < arrMas.length; i++) {
-//          
-//      }
-console.log(squareDigits(432432))
+
 // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
 // Examples
 // "This is an example!" ==> "sihT si na !elpmaxe"
