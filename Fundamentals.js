@@ -1,3 +1,19 @@
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+// Note: The function accepts an integer and returns an integer
+function squareDigits(num){
+     let arrMas = String(num).split('')
+     let arr = []
+     for (i = 0; i < arrMas.length; i++) {
+          arr.push(Math.pow(Number(arrMas[i]), 2))
+     }
+     return Number(arr.join(''));
+}
+// 
+//      for (i < 0; i < arrMas.length; i++) {
+//          
+//      }
+console.log(squareDigits(432432))
 // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
 // Examples
 // "This is an example!" ==> "sihT si na !elpmaxe"
@@ -10,8 +26,6 @@ function reverseWords(str) {
      }
      return arrItog.reverse()
    }
-
-   console.log(reverseWords('Привет как дела?'))
 
 // Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 // Example
