@@ -1,3 +1,11 @@
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+// The output should be two capital letters with a dot separating them.
+// It should look like this:
+// Sam Harris => S.H
+// patrick feeney => P.F
+function abbrevName(name){
+     return name.split(' ').map(e => (e.slice(0,1))).join('.').toUpperCase() 
+ }
 // Часы показывают hчасы, mминуты и sсекунды после полуночи.
 // Ваша задача — написать функцию, которая возвращает время с полуночи в миллисекундах.
 // Пример:
@@ -20,7 +28,6 @@ function past(h, m, s){
      )
      
    }
-   console.log(past(24,54,1))
 
 // Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 // For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
