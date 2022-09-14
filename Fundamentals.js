@@ -1,3 +1,10 @@
+// Implement a function which convert the given boolean value into its string representation.
+// Note: Only valid inputs will be given.
+function booleanToString(b){
+     return b.toString()
+   }
+
+console.log(booleanToString(true))
 // Given a list of integers, determine whether the sum of its elements is odd or even.
 // Give your answer as a string matching "odd" or "even".
 // If the input array is empty consider it as: [0] (array with a zero).
@@ -19,8 +26,6 @@ function oddOrEven(array) {
           return'even'
      }
 }
-
-   console.log(oddOrEven([0, 1, 2,3]))
 
 // Make a program that filters a list of strings and returns a list with only your friends name in it.
 // If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
