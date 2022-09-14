@@ -1,5 +1,16 @@
-// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+// i.e.
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 
+function friend(friends){
+     return friends.filter(e => e.length == 4)
+   }
+
+   console.log(friend(["Ryan", "Kieran", "Mark", "Паша", 4, true]))
+
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 function filter_list(l) {
      return l.filter(e => typeof e === "number")
 }
