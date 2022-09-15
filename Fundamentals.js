@@ -1,3 +1,24 @@
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+// For example (Input --> Output):
+function persistence(num, index) {
+     if (typeof num === 'number' && typeof index === 'number' ) {
+          let number = [...num.toString()].map(Number)
+          for (i =1 ; i <= index; i++){
+               if (number.length > 1) {
+                    let numArr = number.reduce((prevValue, currentValue) => prevValue * currentValue, 1)
+                    number = [...numArr.toString()].map(Number)
+               } else {
+                    return `Ваше число ${number}`
+               }
+          }
+          return `Ваше число ${number}`
+     } else {
+          return 'Вообще то, ты ввёл не целые числа'
+     }
+  }
+//   На CodeWars не совсем понял что от меня хотят, хотя задание выполняет своё действие
+console.log(persistence(4232, 2))
+
 // A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 // Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
 
@@ -8,14 +29,12 @@ function isPangram(string) {
 
     for (let i = 0; i < alphabet.length; i++) {
         if (lowercase.indexOf(alphabet[i]) === -1) {
-            return "not pangram";
+            return false;
         }
     }
 
-    return "pangram";
-}
-
- console.log(isPangram('The quick brown fox jumps over the lazy dog'))  
+    return true;
+} 
 // Implement a function which convert the given boolean value into its string representation.
 // Note: Only valid inputs will be given.
 function booleanToString(b){
