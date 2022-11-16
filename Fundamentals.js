@@ -1,3 +1,26 @@
+// The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+// To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+// Input
+// Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+// Output
+// Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+function openOrSenior(data){
+     let localArray = []
+     data.forEach(e => {
+       if (e[0] >= 55 && e[1] > 7) {
+         localArray.push("Senior")
+       } else {
+         localArray.push("Open")
+       }
+     })
+     return localArray
+   }
+
+   console.log()
+
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 // For example (Input --> Output):
 function persistence(num, index) {
@@ -37,9 +60,9 @@ function isPangram(string) {
 } 
 // Implement a function which convert the given boolean value into its string representation.
 // Note: Only valid inputs will be given.
-function booleanToString(b){
-     return b.toString()
-   }
+// function booleanToString(b){
+//      return b.toString()
+//    }
 
 // Given a list of integers, determine whether the sum of its elements is odd or even.
 // Give your answer as a string matching "odd" or "even".
