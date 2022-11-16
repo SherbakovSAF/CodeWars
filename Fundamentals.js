@@ -1,9 +1,16 @@
+// Description:
+// Make a simple function called greet that returns the most-famous "hello world!".
+// Style Points
+// Sure, this is about as easy as it gets. But how clever can you be to create the most creative hello world you can think of? What is a "hello world" solution you would want to show your friends?
+
+function greet(){
+     return "hello world!"
+   }
+
 // Introduction
 // The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
-
 // Task
 // Given a year, return the century it is in.
-
 // Examples
 // 1705 --> 18
 // 1900 --> 19
