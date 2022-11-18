@@ -1,3 +1,18 @@
+// 1
+// 3     5
+// 7     9    11
+// 13    15    17    19
+// 21    23    25    27    29
+// ...
+// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+// 1 -->  1
+// 2 --> 3 + 5 = 8
+// За 2 минуты нашёл решение в интеренете, но не понял прикол, хотя можно было догадаться
+function rowSumOddNumbers(n) {
+     return Math.pow(n,3)
+    }
+
 // Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
 // Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
 // Example:
