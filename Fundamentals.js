@@ -1,10 +1,21 @@
+// Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+// Example:
+// n= 5, m=5: 25
+// n=-5, m=5:  0
+// Waiting for translations and Feedback! Thanks!
+
+function paperwork(n, m) {
+     return n < 0 || m<0 ? 0 :  n * m
+}
+   
+
 // You get an array of numbers, return the sum of all of the positives ones.
 // Example [1,-4,7,12] => 1 + 7 + 12 = 20
 // Note: if there is nothing to sum, the sum is default to 0.
 
 function positiveSum(arr) {
 return arr.filter(e => e>=0).reduce((prevValue, currentValue)=> prevValue + currentValue, 0)
-// 
 }
 
 // An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
