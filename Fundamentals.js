@@ -1,3 +1,16 @@
+// Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+// Examples (input -> output)
+// 6, "I"     -> "IIIIII"
+// 5, "Hello" -> "HelloHelloHelloHelloHello"
+//  Круто, теперь знаю что такое repeat(
+function repeatStr (n, s) {
+     let localStr = s.toString()
+     for (i = 1; i<n; i++){
+          localStr = localStr + s.toString()
+     }
+     return localStr
+   }
+
 // Write a function which converts the input string to uppercase.
 function makeUpperCase(str) {
      return str.toUpperCase()
