@@ -1,3 +1,31 @@
+// Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+// If you want to know more: http://en.wikipedia.org/wiki/DNA
+// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+// More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+// Example: (input --> output)
+
+function DNAStrand(dna){
+     localStr = ""
+      dna.split("")
+     .forEach(e => {
+       switch(e) {
+           case "A":
+               localStr = localStr + "T"
+               break
+           case "T":
+               localStr = localStr + "A"
+               break
+           case "G":
+               localStr = localStr + "C"
+               break
+           case "C":
+               localStr = localStr + "G"
+               break
+       }
+     })
+return localStr
+   }
+
 // Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 // Examples (input -> output)
 // 6, "I"     -> "IIIIII"
