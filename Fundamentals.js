@@ -1,3 +1,18 @@
+// Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+// Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
+
+// Не знаю почему не работет на codeWars, но у меня работает нормально. Проблема в чтении input'a
+function order(words){
+     return words.split(" ").map(e => e.match(/\d+/)).sort((a, b) => a - b).map(e => e.input).join(' ')
+   }
+
+   console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
+
 // Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
 // If you want to know more: http://en.wikipedia.org/wiki/DNA
 // In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
