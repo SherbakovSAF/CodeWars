@@ -1,3 +1,10 @@
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+function squareSum(numbers){
+     return numbers.map(e => Math.pow(e, 2)).reduce((prevValue, currentValue) => prevValue + currentValue, 0)
+}
+
 // Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
 // Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
 // If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
