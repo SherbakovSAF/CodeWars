@@ -1,3 +1,18 @@
+// Реализуйте функцию unique_in_order, которая принимает в качестве аргумента последовательность и возвращает список элементов без каких-либо элементов с одинаковым значением рядом друг с другом и с сохранением исходного порядка элементов.
+// Например:
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
+
+var uniqueInOrder=function(iterable){
+     let localVar = [...iterable]
+     let localArray = []
+
+     localVar.forEach(e => e == localArray.at(-1) ? localArray = localArray : localArray.push(e))
+     debugger
+     return localArray
+   }
+
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
