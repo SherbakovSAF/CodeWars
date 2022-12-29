@@ -1,3 +1,19 @@
+// Рассмотрим массив/список овец, где некоторые овцы могут отсутствовать на своем месте. Нам нужна функция, которая подсчитывает количество овец, присутствующих в массиве (true означает наличие).
+// Например,
+// [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]
+// Правильный ответ будет 17.
+// Подсказка: не забудьте проверить наличие неправильных значений, таких как null/undefined
+function countSheeps(arrayOfSheep) {
+    let count = 0
+    arrayOfSheep.forEach(e => e == true ? count++ : count)
+    return count
+  }
+
 // Это ката об умножении заданного числа на восемь, если оно четное, и на девять в противном случае.
 function simpleMultiplication(number) {
     return number % 2 === 0 ? number * 8 : number * 9
