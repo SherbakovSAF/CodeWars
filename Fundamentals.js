@@ -1,3 +1,28 @@
+// В вашем классе был тест, и вы его прошли. Поздравляем!
+// Но вы амбициозный человек. Вы хотите знать, лучше ли вы, чем средний ученик в вашем классе.
+// Вы получаете массив с результатами тестов ваших сверстников. Теперь посчитайте среднее и сравните свой результат!
+// Вернись True, если тебе лучше, иначе False!
+// Примечание:
+// Ваши баллы не включены в массив баллов вашего класса. Для расчета среднего балла вы можете добавить свой балл в данный массив!
+
+function betterThanAverage(classPoints, yourPoints) {
+    return classPoints.reduce((a, b) => a + b, yourPoints) /
+        (classPoints.length + 1) <
+        yourPoints
+        ? true
+        : false;
+}
+  
+// function betterThanAverage(classPoints, yourPoints) {
+//     return classPoints.reduce((a, b) => a + b, yourPoints) /
+//         classPoints.length + 1 <
+//         yourPoints
+//         ? true
+//         : false;
+// }
+  
+  
+
 // Завершите решение так, чтобы оно возвращало true, если первый переданный аргумент (строка) заканчивается вторым аргументом (тоже строкой).
 // Примеры:
 // solution('abc', 'bc') // returns true
