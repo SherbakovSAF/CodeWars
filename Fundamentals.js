@@ -1,3 +1,35 @@
+// Задание
+// Подумайте о способе хранения языков в виде базы данных (например, объекта). Языки перечислены ниже, так что вы можете копировать и вставлять!
+// Напишите функцию «приветствия», которая принимает параметр «язык» (всегда строка) и возвращает приветствие, если оно есть в вашей базе данных. По умолчанию должен быть английский, если языка нет в базе данных или в случае неверного ввода.
+
+function greetLanguage(language) {
+	const LANGUAGE_OBJECT = {
+        english: "Welcome",
+        czech: "Vitejte",
+        danish: "Velkomst",
+        dutch: "Welkom",
+        estonian: "Tere tulemast",
+        finnish: "Tervetuloa",
+        flemish: "Welgekomen",
+        french: "Bienvenue",
+        german: "Willkommen",
+        irish: "Failte",
+        italian: "Benvenuto",
+        latvian: "Gaidits",
+        lithuanian: "Laukiamas",
+        polish: "Witamy",
+        spanish: "Bienvenido",
+        swedish: "Valkommen",
+        welsh: "Croeso",
+    };
+    return LANGUAGE_OBJECT.hasOwnProperty(language) ? LANGUAGE_OBJECT[language] : LANGUAGE_OBJECT.english
+}
+// Создайте метод, чтобы увидеть, является ли строка ВСЕМИ ЗАГЛАВНЫМИ.
+
+String.prototype.isUpperCase = function() {
+    return /[A-ZА-ЯЁ]/g.test(String)
+ }
+
 // В вашем классе был тест, и вы его прошли. Поздравляем!
 // Но вы амбициозный человек. Вы хотите знать, лучше ли вы, чем средний ученик в вашем классе.
 // Вы получаете массив с результатами тестов ваших сверстников. Теперь посчитайте среднее и сравните свой результат!
