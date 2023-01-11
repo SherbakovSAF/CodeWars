@@ -1,3 +1,16 @@
+// Завершите решение, чтобы функция разбивала верблюжий регистр, используя пробелы между словами.
+
+// Пример
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+// complete the function
+function solutionStr(string) {
+    return /(?=[А-ЯЁA-Z])/g[Symbol.split](string).join(" ")
+}
+
+
 // Если указано число от 0 до 9, верните его словами.
 // Вход :: 1
 // Выход :: "Один".
