@@ -1,3 +1,12 @@
+// Проверьте, содержит ли строка одинаковое количество «x» и «o». Метод должен возвращать логическое значение и не учитывать регистр. Строка может содержать любой символ.
+
+function XO(str) {
+    let countX = 0
+    let countO = 0
+    str.toLowerCase().split("").filter(e=> e == "x" || e == "o").forEach(e=> e == "x" ? countX++ : countO++)
+    return countO == countX
+}
+
 // Теперь вам нужно написать функцию, которая принимает аргумент и возвращает его квадрат.
 function square(number) {
     return Math.pow(number, 2);
