@@ -1,5 +1,32 @@
-// Проверьте, содержит ли строка одинаковое количество «x» и «o». Метод должен возвращать логическое значение и не учитывать регистр. Строка может содержать любой символ.
+// Подсчитайте количество делителей натурального числа n.
+// Случайные тесты доходят до n = 500000.
 
+function getDivisorsCnt(n){
+    let localCount = 0
+    for (let i = 0; i <= n; i++) {
+        if(n % i == 0) localCount++
+    }
+    return localCount
+}
+
+// Звездолет «Энтерпрайз» столкнулся с проблемой при создании программы для приветствия всех, кто поднимается на борт. Ваша задача — исправить код и заставить программу снова работать!
+function sayHello(name) {
+    return `Hello, ${name}`;
+}
+
+// Постройте башню в форме пирамиды как массив/список строк, учитывая положительное целое число number of floors. Башенный блок представлен с "*"характером.
+
+function towerBuilder(nFloors) {
+    let localArray = []
+    let count = 1
+    for(let i = 1; count <=nFloors ; i+=2){
+        localArray.push("*".repeat(i))
+        count++
+    }
+    return localArray
+}
+
+// Проверьте, содержит ли строка одинаковое количество «x» и «o». Метод должен возвращать логическое значение и не учитывать регистр. Строка может содержать любой символ.
 function XO(str) {
     let countX = 0
     let countO = 0
@@ -569,8 +596,6 @@ function order(words) {
         .join(" ");
 }
 
-console.log(order("4of Fo1r pe6ople g3ood th5e the2"));
-
 // Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
 // If you want to know more: http://en.wikipedia.org/wiki/DNA
 // In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". Your function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
@@ -802,7 +827,6 @@ function persistence(num, index) {
     }
 }
 //   На CodeWars не совсем понял что от меня хотят, хотя задание выполняет своё действие
-console.log(persistence(4232, 2));
 
 // A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 // Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
