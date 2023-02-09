@@ -1,6 +1,13 @@
+// вам нужно создать функцию, которая при наличии триплета возвращает индекс числового элемента, лежащего между двумя другими элементами.
+function gimme (triplet) {
+    localArray = [...triplet]
+    return triplet.indexOf(localArray.sort((a,b) => a-b)[1])
+}
+console.log(gimme([5,10,14]))
+
+
 // Подсчитайте количество делителей натурального числа n.
 // Случайные тесты доходят до n = 500000.
-
 function getDivisorsCnt(n){
     let localCount = 0
     for (let i = 0; i <= n; i++) {
